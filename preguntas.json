@@ -1,0 +1,103 @@
+
+[
+  {
+    "question": "Programa una tarea todos los días a las 8:00.",
+    "answer": ["0", "8", "*", "*", "*"],
+    "hint": "El minuto es 0 y la hora es 8."
+  },
+  {
+    "question": "Programa una tarea todos los días a las 22:30.",
+    "answer": ["30", "22", "*", "*", "*"],
+    "hint": "Recuerda que primero se escribe el minuto."
+  },
+  {
+    "question": "Programa una tarea todos los lunes a las 9:00.",
+    "answer": ["0", "9", "*", "*", "1"],
+    "hint": "En Ubuntu, el lunes se representa con 1."
+  },
+  {
+    "question": "Programa una tarea el día 1 de cada mes a medianoche.",
+    "answer": ["0", "0", "1", "*", "*"],
+    "hint": "La medianoche corresponde a las 00:00."
+  },
+  {
+    "question": "Programa una tarea cada 15 minutos.",
+    "answer": ["*/15", "*", "*", "*", "*"],
+    "hint": "Utiliza */15 en el campo de los minutos."
+  },
+  {
+    "question": "Programa una tarea cada hora, en el minuto 30.",
+    "answer": ["30", "*", "*", "*", "*"],
+    "hint": "El minuto es fijo, pero la hora puede ser cualquiera."
+  },
+  {
+    "question": "Programa una tarea todos los días de junio a las 8:00.",
+    "answer": ["0", "8", "*", "6", "*"],
+    "hint": "Junio es el mes 6."
+  },
+  {
+    "question": "Programa una tarea de lunes a viernes a las 7:45.",
+    "answer": ["45", "7", "*", "*", "1-5"],
+    "hint": "Utiliza el intervalo 1-5 en el día de la semana."
+  },
+  {
+    "question": "Programa una tarea cada 6 horas, en el minuto 0.",
+    "answer": ["0", "*/6", "*", "*", "*"],
+    "hint": "El intervalo debe estar en el campo de la hora."
+  },
+  {
+    "question": "Programa una tarea los días 1 y 15 de cada mes a las 12:00.",
+    "answer": ["0", "12", "1,15", "*", "*"],
+    "hint": "Separa los días con una coma."
+  },
+  {
+    "question": "Programa una tarea cada 10 minutos, solo durante marzo.",
+    "answer": ["*/10", "*", "*", "3", "*"],
+    "hint": "Marzo es el mes 3."
+  },
+  {
+    "question": "Programa una tarea a las 6:00, 12:00 y 18:00 todos los días.",
+    "answer": ["0", "6,12,18", "*", "*", "*"],
+    "hint": "Puedes indicar varias horas separadas por comas."
+  },
+  {
+    "question": "Programa una tarea cada 20 minutos durante las horas 8, 9 y 10.",
+    "answer": ["*/20", "8-10", "*", "*", "*"],
+    "hint": "Combina un intervalo de minutos con un rango de horas."
+  },
+  {
+    "question": "Programa una tarea cada 5 minutos, de lunes a viernes, en enero y febrero.",
+    "answer": ["*/5", "*", "*", "1,2", "1-5"],
+    "hint": "Enero es 1 y febrero es 2."
+  },
+  {
+    "question": "Programa una tarea todos los domingos a las 23:00.",
+    "answer": ["0", "23", "*", "*", "0"],
+    "hint": "En Ubuntu, el domingo puede ser 0 o 7."
+  },
+  {
+    "question": "Programa una tarea a las 14:10 el día 25 de diciembre.",
+    "answer": ["10", "14", "25", "12", "*"],
+    "hint": "Diciembre es el mes 12."
+  },
+  {
+    "question": "Programa una tarea cada 30 minutos, entre las 9:00 y las 17:59.",
+    "answer": ["*/30", "9-17", "*", "*", "*"],
+    "hint": "Las horas deben ir desde 9 hasta 17, ambas incluidas."
+  },
+  {
+    "question": "Programa una tarea los sábados a las 10:15.",
+    "answer": ["15", "10", "*", "*", "6"],
+    "hint": "El sábado se representa con 6."
+  },
+  {
+    "question": "Programa una tarea el día 10 de cada mes a las 6:05.",
+    "answer": ["5", "6", "10", "*", "*"],
+    "hint": "El minuto 5 se escribe como 5."
+  },
+  {
+    "question": "Programa una tarea cada 2 horas, empezando a medianoche.",
+    "answer": ["0", "*/2", "*", "*", "*"],
+    "hint": "El intervalo */2 debe estar en el campo de la hora."
+  }
+]
