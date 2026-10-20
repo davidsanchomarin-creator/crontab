@@ -1,103 +1,1537 @@
-
 [
   {
-    "question": "Programa una tarea todos los días a las 8:00.",
-    "answer": ["0", "8", "*", "*", "*"],
-    "hint": "El minuto es 0 y la hora es 8."
+    "question": "Programa una tarea Cada día a las 8:00.",
+    "hint": "Separa minutos y horas.",
+    "answers": [
+      [
+        "0",
+        "8",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "Cron usa cinco campos: minuto, hora, día del mes, mes y día de la semana.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea todos los días a las 22:30.",
-    "answer": ["30", "22", "*", "*", "*"],
-    "hint": "Recuerda que primero se escribe el minuto."
+    "question": "Programa una tarea Cada día a las 22:30.",
+    "hint": "Minutos antes que horas.",
+    "answers": [
+      [
+        "30",
+        "22",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "Las 22:30 se representan con minuto 30 y hora 22.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea todos los lunes a las 9:00.",
-    "answer": ["0", "9", "*", "*", "1"],
-    "hint": "En Ubuntu, el lunes se representa con 1."
+    "question": "Programa una tarea Cada día a medianoche.",
+    "hint": "La medianoche es 00:00.",
+    "answers": [
+      [
+        "0",
+        "0",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "A las 00:00, minuto y hora valen 0.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea el día 1 de cada mes a medianoche.",
-    "answer": ["0", "0", "1", "*", "*"],
-    "hint": "La medianoche corresponde a las 00:00."
+    "question": "Programa una tarea Cada día a las 12:00.",
+    "hint": "Usa formato de 24 horas.",
+    "answers": [
+      [
+        "0",
+        "12",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "A las 12:00, minuto 0 y hora 12.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea cada 15 minutos.",
-    "answer": ["*/15", "*", "*", "*", "*"],
-    "hint": "Utiliza */15 en el campo de los minutos."
+    "question": "Programa una tarea Cada día a las 18:45.",
+    "hint": "Minutos antes que horas.",
+    "answers": [
+      [
+        "45",
+        "18",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "Las 18:45 se escriben como 45 y 18.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea cada hora, en el minuto 30.",
-    "answer": ["30", "*", "*", "*", "*"],
-    "hint": "El minuto es fijo, pero la hora puede ser cualquiera."
+    "question": "Programa una tarea Todos los lunes a las 9:00.",
+    "hint": "Lunes suele ser 1.",
+    "answers": [
+      [
+        "0",
+        "9",
+        "*",
+        "*",
+        "1"
+      ]
+    ],
+    "explanation": "El quinto campo representa el día de la semana; lunes es 1.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea todos los días de junio a las 8:00.",
-    "answer": ["0", "8", "*", "6", "*"],
-    "hint": "Junio es el mes 6."
+    "question": "Programa una tarea Todos los viernes a las 17:00.",
+    "hint": "Viernes suele ser 5.",
+    "answers": [
+      [
+        "0",
+        "17",
+        "*",
+        "*",
+        "5"
+      ]
+    ],
+    "explanation": "En cron de Linux, viernes se representa con 5.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea de lunes a viernes a las 7:45.",
-    "answer": ["45", "7", "*", "*", "1-5"],
-    "hint": "Utiliza el intervalo 1-5 en el día de la semana."
+    "question": "Programa una tarea El día 1 de cada mes a las 6:00.",
+    "hint": "El día del mes es el tercer campo.",
+    "answers": [
+      [
+        "0",
+        "6",
+        "1",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "El tercer campo 1 limita la tarea al primer día del mes.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea cada 6 horas, en el minuto 0.",
-    "answer": ["0", "*/6", "*", "*", "*"],
-    "hint": "El intervalo debe estar en el campo de la hora."
+    "question": "Programa una tarea El 1 de enero a las 7:15.",
+    "hint": "El cuarto campo es el mes.",
+    "answers": [
+      [
+        "15",
+        "7",
+        "1",
+        "1",
+        "*"
+      ]
+    ],
+    "explanation": "Enero se representa con 1.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea los días 1 y 15 de cada mes a las 12:00.",
-    "answer": ["0", "12", "1,15", "*", "*"],
-    "hint": "Separa los días con una coma."
+    "question": "Programa una tarea Cada hora en el minuto 0.",
+    "hint": "Deja la hora libre.",
+    "answers": [
+      [
+        "0",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "El asterisco en hora permite todas las horas; minuto 0 fija el inicio de cada hora.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea cada 10 minutos, solo durante marzo.",
-    "answer": ["*/10", "*", "*", "3", "*"],
-    "hint": "Marzo es el mes 3."
+    "question": "Programa una tarea Cada hora en el minuto 30.",
+    "hint": "Fija el minuto.",
+    "answers": [
+      [
+        "30",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "El patrón se activa en el minuto 30 de cada hora.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea a las 6:00, 12:00 y 18:00 todos los días.",
-    "answer": ["0", "6,12,18", "*", "*", "*"],
-    "hint": "Puedes indicar varias horas separadas por comas."
+    "question": "Programa una tarea Cada 15 minutos.",
+    "hint": "Piensa en 0, 15, 30 y 45.",
+    "answers": [
+      [
+        "*/15",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/15 selecciona minutos en pasos de 15 dentro de cada hora.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea cada 20 minutos durante las horas 8, 9 y 10.",
-    "answer": ["*/20", "8-10", "*", "*", "*"],
-    "hint": "Combina un intervalo de minutos con un rango de horas."
+    "question": "Programa una tarea Cada 10 minutos.",
+    "hint": "Avanza de diez en diez.",
+    "answers": [
+      [
+        "*/10",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/10 selecciona 0, 10, 20, 30, 40 y 50.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea cada 5 minutos, de lunes a viernes, en enero y febrero.",
-    "answer": ["*/5", "*", "*", "1,2", "1-5"],
-    "hint": "Enero es 1 y febrero es 2."
+    "question": "Programa una tarea Cada 5 minutos.",
+    "hint": "Usa un paso de cinco.",
+    "answers": [
+      [
+        "*/5",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/5 selecciona los múltiplos de cinco de cada hora.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea todos los domingos a las 23:00.",
-    "answer": ["0", "23", "*", "*", "0"],
-    "hint": "En Ubuntu, el domingo puede ser 0 o 7."
+    "question": "Programa una tarea Todos los sábados a las 10:00.",
+    "hint": "Sábado suele ser 6.",
+    "answers": [
+      [
+        "0",
+        "10",
+        "*",
+        "*",
+        "6"
+      ]
+    ],
+    "explanation": "El quinto campo usa 6 para sábado.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea a las 14:10 el día 25 de diciembre.",
-    "answer": ["10", "14", "25", "12", "*"],
-    "hint": "Diciembre es el mes 12."
+    "question": "Programa una tarea Todos los domingos a las 20:00.",
+    "hint": "Domingo puede ser 0 o 7.",
+    "answers": [
+      [
+        "0",
+        "20",
+        "*",
+        "*",
+        "0"
+      ],
+      [
+        "0",
+        "20",
+        "*",
+        "*",
+        "7"
+      ]
+    ],
+    "explanation": "En cron de Linux, domingo se representa con 0 o, según implementación, con 7.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea cada 30 minutos, entre las 9:00 y las 17:59.",
-    "answer": ["*/30", "9-17", "*", "*", "*"],
-    "hint": "Las horas deben ir desde 9 hasta 17, ambas incluidas."
+    "question": "Programa una tarea El día 15 de cada mes a las 8:30.",
+    "hint": "El tercer campo es el día del mes.",
+    "answers": [
+      [
+        "30",
+        "8",
+        "15",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "El valor 15 selecciona el día 15 de cada mes.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea los sábados a las 10:15.",
-    "answer": ["15", "10", "*", "*", "6"],
-    "hint": "El sábado se representa con 6."
+    "question": "Programa una tarea Cada marzo a las 9:00.",
+    "hint": "Marzo es el mes 3.",
+    "answers": [
+      [
+        "0",
+        "9",
+        "*",
+        "3",
+        "*"
+      ]
+    ],
+    "explanation": "El cuarto campo representa el mes.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea el día 10 de cada mes a las 6:05.",
-    "answer": ["5", "6", "10", "*", "*"],
-    "hint": "El minuto 5 se escribe como 5."
+    "question": "Programa una tarea Cada día a las 6:05.",
+    "hint": "No necesitas escribir un cero inicial.",
+    "answers": [
+      [
+        "5",
+        "6",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "Las 6:05 se representan con minuto 5 y hora 6.",
+    "difficulty": "facil"
   },
   {
-    "question": "Programa una tarea cada 2 horas, empezando a medianoche.",
-    "answer": ["0", "*/2", "*", "*", "*"],
-    "hint": "El intervalo */2 debe estar en el campo de la hora."
+    "question": "Programa una tarea Cada día a las 23:59.",
+    "hint": "Usa formato de 24 horas.",
+    "answers": [
+      [
+        "59",
+        "23",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "El último minuto del día es 23:59.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea lunes a viernes a las 8:00.",
+    "hint": "Usa un rango de días.",
+    "answers": [
+      [
+        "0",
+        "8",
+        "*",
+        "*",
+        "1-5"
+      ]
+    ],
+    "explanation": "1-5 representa lunes a viernes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea lunes a viernes a las 14:30.",
+    "hint": "Restringe el último campo.",
+    "answers": [
+      [
+        "30",
+        "14",
+        "*",
+        "*",
+        "1-5"
+      ]
+    ],
+    "explanation": "El rango 1-5 limita a los días laborables.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea sábados y domingos a las 9:00.",
+    "hint": "Una lista separa valores con comas.",
+    "answers": [
+      [
+        "0",
+        "9",
+        "*",
+        "*",
+        "0,6"
+      ],
+      [
+        "0",
+        "9",
+        "*",
+        "*",
+        "6,7"
+      ]
+    ],
+    "explanation": "0,6 selecciona domingo y sábado.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea lunes, miércoles y viernes a las 7:00.",
+    "hint": "Combina días con una lista.",
+    "answers": [
+      [
+        "0",
+        "7",
+        "*",
+        "*",
+        "1,3,5"
+      ]
+    ],
+    "explanation": "1,3,5 selecciona lunes, miércoles y viernes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea martes y jueves a las 16:00.",
+    "hint": "Martes es 2 y jueves 4.",
+    "answers": [
+      [
+        "0",
+        "16",
+        "*",
+        "*",
+        "2,4"
+      ]
+    ],
+    "explanation": "La lista 2,4 limita a esos días.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea los días 1 y 15 de cada mes a las 6:00.",
+    "hint": "La lista de días va en el tercer campo.",
+    "answers": [
+      [
+        "0",
+        "6",
+        "1,15",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "El tercer campo admite 1,15.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea el día 10 de enero a las 8:00.",
+    "hint": "Día del mes y mes son campos 3 y 4.",
+    "answers": [
+      [
+        "0",
+        "8",
+        "10",
+        "1",
+        "*"
+      ]
+    ],
+    "explanation": "El día 10 y el mes 1 indican el 10 de enero.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada abril y octubre a las 12:00.",
+    "hint": "El cuarto campo admite listas.",
+    "answers": [
+      [
+        "0",
+        "12",
+        "*",
+        "4,10",
+        "*"
+      ]
+    ],
+    "explanation": "4,10 representa abril y octubre.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 9:00 y 17:00 cada día.",
+    "hint": "Lista las horas separadas por comas.",
+    "answers": [
+      [
+        "0",
+        "9,17",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "9,17 selecciona ambas horas.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 8:00, 12:00 y 18:00 cada día.",
+    "hint": "Usa una lista de horas.",
+    "answers": [
+      [
+        "0",
+        "8,12,18",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "8,12,18 selecciona tres horas.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 20 minutos.",
+    "hint": "Un paso de 20 en minutos.",
+    "answers": [
+      [
+        "*/20",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/20 selecciona 0, 20 y 40.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 2 horas, en el minuto 0.",
+    "hint": "El paso está en las horas.",
+    "answers": [
+      [
+        "0",
+        "*/2",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/2 selecciona horas en pasos de dos.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 6 horas, en el minuto 15.",
+    "hint": "Combina minuto fijo y paso horario.",
+    "answers": [
+      [
+        "15",
+        "*/6",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/6 selecciona horas 0, 6, 12 y 18.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada hora en punto entre las 8 y las 18.",
+    "hint": "El rango incluye los extremos.",
+    "answers": [
+      [
+        "0",
+        "8-18",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "8-18 selecciona todas esas horas en el minuto 0.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 8:00 y cada hora entre 14:00 y 16:00.",
+    "hint": "Combina hora aislada y rango.",
+    "answers": [
+      [
+        "0",
+        "8,14-16",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "8,14-16 selecciona 8, 14, 15 y 16.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 30 minutos, solo los lunes.",
+    "hint": "Intervalo de minutos y día fijo.",
+    "answers": [
+      [
+        "*/30",
+        "*",
+        "*",
+        "*",
+        "1"
+      ]
+    ],
+    "explanation": "*/30 selecciona minuto 0 y 30; 1 es lunes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 10 minutos de lunes a viernes.",
+    "hint": "Combina paso de minutos y rango de días.",
+    "answers": [
+      [
+        "*/10",
+        "*",
+        "*",
+        "*",
+        "1-5"
+      ]
+    ],
+    "explanation": "*/10 selecciona seis veces por hora y 1-5 los días laborables.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 7:30 los días 5, 10 y 20.",
+    "hint": "Lista días del mes.",
+    "answers": [
+      [
+        "30",
+        "7",
+        "5,10,20",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "5,10,20 selecciona esos días.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea el primer día de cada mes a las 2:15.",
+    "hint": "El día 1 se indica con 1.",
+    "answers": [
+      [
+        "15",
+        "2",
+        "1",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "El tercer campo 1 representa el primer día del mes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada diciembre a las 23:00.",
+    "hint": "Diciembre es 12.",
+    "answers": [
+      [
+        "0",
+        "23",
+        "*",
+        "12",
+        "*"
+      ]
+    ],
+    "explanation": "El cuarto campo 12 selecciona diciembre.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada domingo a las 23:30.",
+    "hint": "Domingo puede ser 0 o 7.",
+    "answers": [
+      [
+        "30",
+        "23",
+        "*",
+        "*",
+        "0"
+      ],
+      [
+        "30",
+        "23",
+        "*",
+        "*",
+        "7"
+      ]
+    ],
+    "explanation": "El quinto campo 0 representa domingo.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 9:00 y 13:00 los días laborables.",
+    "hint": "Lista de horas y rango de días.",
+    "answers": [
+      [
+        "0",
+        "9,13",
+        "*",
+        "*",
+        "1-5"
+      ]
+    ],
+    "explanation": "9,13 selecciona dos horas y 1-5 lunes a viernes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 6:00 el día 1 de enero y julio.",
+    "hint": "Enero es 1 y julio 7.",
+    "answers": [
+      [
+        "0",
+        "6",
+        "1",
+        "1,7",
+        "*"
+      ]
+    ],
+    "explanation": "El día 1 y la lista 1,7 seleccionan ambas fechas mensuales.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 10:45 de lunes a sábado.",
+    "hint": "Selecciona lunes a sábado.",
+    "answers": [
+      [
+        "45",
+        "10",
+        "*",
+        "*",
+        "1-6"
+      ]
+    ],
+    "explanation": "1-6 excluye domingo.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 4 horas en el minuto 30.",
+    "hint": "El paso está en el campo de horas.",
+    "answers": [
+      [
+        "30",
+        "*/4",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/4 selecciona 0, 4, 8, 12, 16 y 20.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea en los minutos 0 y 30 de cada hora.",
+    "hint": "Usa lista explícita de minutos.",
+    "answers": [
+      [
+        "0,30",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "0,30 selecciona ambos minutos.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea en los minutos 5, 25 y 45.",
+    "hint": "Usa una lista de minutos.",
+    "answers": [
+      [
+        "5,25,45",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "La lista selecciona esos tres minutos cada hora.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 8:00 el día 1 de cada mes y los lunes.",
+    "hint": "Revisa la semántica de ambos campos de día.",
+    "answers": [
+      [
+        "0",
+        "8",
+        "1",
+        "*",
+        "1"
+      ]
+    ],
+    "explanation": "En cron tradicional, cuando ambos campos de día están restringidos, normalmente se combinan con OR.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada febrero a las 3:00.",
+    "hint": "Febrero es 2.",
+    "answers": [
+      [
+        "0",
+        "3",
+        "*",
+        "2",
+        "*"
+      ]
+    ],
+    "explanation": "El cuarto campo 2 selecciona febrero.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea los lunes y miércoles a las 2:30.",
+    "hint": "Usa una lista en el campo del día de la semana.",
+    "answers": [
+      [
+        "30",
+        "2",
+        "*",
+        "*",
+        "1,3"
+      ]
+    ],
+    "explanation": "30 2 * * 1,3 ejecuta la tarea a las 2:30 los lunes y miércoles.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 0:00 los días 1 a 7.",
+    "hint": "Rango de días del mes.",
+    "answers": [
+      [
+        "0",
+        "0",
+        "1-7",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "1-7 selecciona los primeros siete días.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 5:00 cada 3 horas, solo los viernes.",
+    "hint": "Combina paso horario y día.",
+    "answers": [
+      [
+        "0",
+        "*/3",
+        "*",
+        "*",
+        "5"
+      ]
+    ],
+    "explanation": "*/3 selecciona horas en pasos de tres; 5 es viernes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 7:00 todos los lunes.",
+    "hint": "El último campo indica el día de la semana.",
+    "answers": [
+      [
+        "0",
+        "7",
+        "*",
+        "*",
+        "1"
+      ]
+    ],
+    "explanation": "El valor 1 representa lunes. Esta expresión se ejecuta cada lunes, no solo el primer lunes del mes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 9:00 los días 1 a 5 de enero.",
+    "hint": "Rango de días y mes.",
+    "answers": [
+      [
+        "0",
+        "9",
+        "1-5",
+        "1",
+        "*"
+      ]
+    ],
+    "explanation": "1-5 limita a los cinco primeros días y 1 a enero.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 15 minutos durante las horas 8 a 17.",
+    "hint": "Combina paso de minutos y rango horario.",
+    "answers": [
+      [
+        "*/15",
+        "8-17",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/15 selecciona 0, 15, 30 y 45; 8-17 incluye esas horas.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 0:00 los lunes, miércoles y viernes.",
+    "hint": "El último campo es el día de semana.",
+    "answers": [
+      [
+        "0",
+        "0",
+        "*",
+        "*",
+        "1,3,5"
+      ]
+    ],
+    "explanation": "1,3,5 selecciona lunes, miércoles y viernes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 23:00 el día 31 de cada mes.",
+    "hint": "Algunos meses no tienen día 31.",
+    "answers": [
+      [
+        "0",
+        "23",
+        "31",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "El día 31 solo ejecuta en los meses que contienen esa fecha.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 6:00 en enero los lunes.",
+    "hint": "Mes y día de semana son campos diferentes.",
+    "answers": [
+      [
+        "0",
+        "6",
+        "*",
+        "1",
+        "1"
+      ]
+    ],
+    "explanation": "Con ambos campos restringidos, cron tradicional puede ejecutar en cualquier lunes o cualquier día de enero.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 8:00 los días 1 a 6 de cada mes.",
+    "hint": "Rango en el tercer campo.",
+    "answers": [
+      [
+        "0",
+        "8",
+        "1-6",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "1-6 selecciona los primeros seis días.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 7 minutos.",
+    "hint": "Los pasos se reinician en cada hora.",
+    "answers": [
+      [
+        "*/7",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/7 selecciona 0,7,14,21,28,35,42,49,56; no es un intervalo continuo entre horas.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 45 minutos.",
+    "hint": "Interpreta el paso dentro del campo de minutos.",
+    "answers": [
+      [
+        "*/45",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/45 selecciona los minutos 0 y 45 de cada hora, no un intervalo continuo de 45 minutos.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea en los minutos 2, 17, 32 y 47.",
+    "hint": "Combina rango y paso.",
+    "answers": [
+      [
+        "2-47/15",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "2-47/15 selecciona 2,17,32,47.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 13 minutos.",
+    "hint": "El paso se calcula dentro de cada hora.",
+    "answers": [
+      [
+        "*/13",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/13 selecciona 0,13,26,39,52 y reinicia en la hora siguiente.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las horas pares en el minuto 10.",
+    "hint": "Rango horario con paso 2.",
+    "answers": [
+      [
+        "10",
+        "0-23/2",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "0-23/2 selecciona las horas 0,2,...,22.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las horas impares en el minuto 10.",
+    "hint": "Empieza en la primera hora impar.",
+    "answers": [
+      [
+        "10",
+        "1-23/2",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "1-23/2 selecciona 1,3,...,23.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 5 minutos de 9:00 a 17:55 de lunes a viernes.",
+    "hint": "El rango horario incluye las 17:00-17:59.",
+    "answers": [
+      [
+        "*/5",
+        "9-17",
+        "*",
+        "*",
+        "1-5"
+      ]
+    ],
+    "explanation": "*/5 y 9-17 ejecuta cada cinco minutos durante las horas 9 a 17 inclusive.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 23:00 los días 25 a 31 de diciembre.",
+    "hint": "Restringe día del mes y mes.",
+    "answers": [
+      [
+        "0",
+        "23",
+        "25-31",
+        "12",
+        "*"
+      ]
+    ],
+    "explanation": "25-31 y 12 seleccionan los últimos días de diciembre.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea los lunes de marzo a junio a las 8:30.",
+    "hint": "El rango de meses incluye ambos extremos.",
+    "answers": [
+      [
+        "30",
+        "8",
+        "*",
+        "3-6",
+        "1"
+      ]
+    ],
+    "explanation": "3-6 representa marzo a junio; 1 es lunes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 4:05 los días 2, 12 y 22.",
+    "hint": "Lista de días del mes.",
+    "answers": [
+      [
+        "5",
+        "4",
+        "2,12,22",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "2,12,22 selecciona esos días.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 6:00 los martes de enero y julio.",
+    "hint": "Lista de meses y día de semana.",
+    "answers": [
+      [
+        "0",
+        "6",
+        "*",
+        "1,7",
+        "2"
+      ]
+    ],
+    "explanation": "1,7 representa enero y julio; 2 es martes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 10 minutos entre los minutos 5 y 55.",
+    "hint": "El paso parte del inicio del rango.",
+    "answers": [
+      [
+        "5-55/10",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "5-55/10 selecciona 5,15,25,35,45,55.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 8 minutos empezando en el minuto 3 de cada hora.",
+    "hint": "El paso parte del 3.",
+    "answers": [
+      [
+        "3-59/8",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "3-59/8 selecciona 3,11,19,27,35,43,51,59.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 6 horas empezando a la 1:00.",
+    "hint": "Rango con paso desde la hora 1.",
+    "answers": [
+      [
+        "0",
+        "1-23/6",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "1-23/6 selecciona 1,7,13,19.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 2:30 los lunes y miércoles.",
+    "hint": "Usa una lista de días de la semana.",
+    "answers": [
+      [
+        "30",
+        "2",
+        "*",
+        "*",
+        "1,3"
+      ]
+    ],
+    "explanation": "La expresión 30 2 * * 1,3 selecciona las 2:30 de lunes y miércoles.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 23:00 el día 28 de cada mes.",
+    "hint": "El tercer campo representa el día del mes.",
+    "answers": [
+      [
+        "0",
+        "23",
+        "28",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "El valor 28 selecciona el día 28 de cada mes. Cron estándar no tiene un modificador portable para el último día del mes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 8:00 todos los domingos.",
+    "hint": "Domingo se representa con 0 o 7.",
+    "answers": [
+      [
+        "0",
+        "8",
+        "*",
+        "*",
+        "0"
+      ],
+      [
+        "0",
+        "8",
+        "*",
+        "*",
+        "7"
+      ]
+    ],
+    "explanation": "El último campo 0 representa domingo. Esta expresión selecciona todos los domingos, no solo el segundo domingo del mes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea el 29 de febrero a las 12:00.",
+    "hint": "La fecha no existe todos los años.",
+    "answers": [
+      [
+        "0",
+        "12",
+        "29",
+        "2",
+        "*"
+      ]
+    ],
+    "explanation": "La expresión solo puede ejecutarse en años en que exista el 29 de febrero.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea los días 1 a 7 y además los lunes a las 9:00.",
+    "hint": "Cron tradicional combina ambos campos de día con OR.",
+    "answers": [
+      [
+        "0",
+        "9",
+        "1-7",
+        "*",
+        "1"
+      ]
+    ],
+    "explanation": "La ejecución ocurre si el día del mes está entre 1 y 7 o si es lunes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 8:00 todos los lunes de enero, usando la semántica tradicional de cron.",
+    "hint": "Cuando mes y día de semana están restringidos, revisa la semántica OR tradicional.",
+    "answers": [
+      [
+        "0",
+        "8",
+        "*",
+        "1",
+        "1"
+      ]
+    ],
+    "explanation": "En cron tradicional, esta expresión con el mes y el día de semana restringidos puede ejecutarse cualquier día de enero o cualquier lunes; no representa una condición AND exacta.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea en los minutos 0,20,40 a las horas 6,14,22.",
+    "hint": "Lista tanto en minutos como en horas.",
+    "answers": [
+      [
+        "0,20,40",
+        "6,14,22",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "Cada minuto listado se combina con cada hora listada.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 00:05 el día 1 de enero, abril, julio y octubre.",
+    "hint": "Lista de meses.",
+    "answers": [
+      [
+        "5",
+        "0",
+        "1",
+        "1,4,7,10",
+        "*"
+      ]
+    ],
+    "explanation": "1,4,7,10 selecciona enero, abril, julio y octubre.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 7:00 los días 10 a 20 de mayo.",
+    "hint": "Mayo es el mes 5.",
+    "answers": [
+      [
+        "0",
+        "7",
+        "10-20",
+        "5",
+        "*"
+      ]
+    ],
+    "explanation": "10-20 selecciona los días del 10 al 20 y 5 selecciona mayo.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 12 minutos durante las horas 8 y 9.",
+    "hint": "El rango incluye las dos horas completas.",
+    "answers": [
+      [
+        "*/12",
+        "8-9",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "*/12 selecciona minutos 0,12,24,36,48 en las horas 8 y 9.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 0:00 los días 1 y 15 de cada mes.",
+    "hint": "Usa una lista en el campo de día del mes.",
+    "answers": [
+      [
+        "0",
+        "0",
+        "1,15",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "La lista 1,15 selecciona los días 1 y 15 de cada mes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 10:00 el día 1 de cada mes excepto enero.",
+    "hint": "Una lista/rango explícito evita necesitar una negación.",
+    "answers": [
+      [
+        "0",
+        "10",
+        "1",
+        "2-12",
+        "*"
+      ]
+    ],
+    "explanation": "2-12 selecciona febrero a diciembre.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 10:00 el día 1 de febrero a noviembre.",
+    "hint": "El rango de meses incluye febrero y noviembre.",
+    "answers": [
+      [
+        "0",
+        "10",
+        "1",
+        "2-11",
+        "*"
+      ]
+    ],
+    "explanation": "2-11 representa febrero a noviembre.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 5:00 los miércoles cada dos meses empezando en enero.",
+    "hint": "El paso empieza en el primer mes del rango.",
+    "answers": [
+      [
+        "0",
+        "5",
+        "*",
+        "1-12/2",
+        "3"
+      ]
+    ],
+    "explanation": "1-12/2 selecciona enero, marzo, mayo, julio, septiembre y noviembre.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 5:00 los miércoles en los meses pares.",
+    "hint": "Empieza en febrero y avanza de dos en dos.",
+    "answers": [
+      [
+        "0",
+        "5",
+        "*",
+        "2-12/2",
+        "3"
+      ]
+    ],
+    "explanation": "2-12/2 selecciona febrero, abril, junio, agosto, octubre y diciembre.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 9:00 laborables solo en marzo y septiembre.",
+    "hint": "Lista de meses y rango de días.",
+    "answers": [
+      [
+        "0",
+        "9",
+        "*",
+        "3,9",
+        "1-5"
+      ]
+    ],
+    "explanation": "3,9 selecciona marzo y septiembre; 1-5 lunes a viernes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 3 minutos entre 10:15 y 10:45.",
+    "hint": "Un rango con paso puede limitar los minutos de una hora.",
+    "answers": [
+      [
+        "15-45/3",
+        "10",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "15-45/3 selecciona 15,18,...,45 solo en la hora 10.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 8:00 los días 1, 8, 15 y 22.",
+    "hint": "Lista de días del mes.",
+    "answers": [
+      [
+        "0",
+        "8",
+        "1,8,15,22",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "La lista selecciona cuatro días mensuales.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 23:50 los viernes y sábados.",
+    "hint": "Viernes es 5 y sábado 6.",
+    "answers": [
+      [
+        "50",
+        "23",
+        "*",
+        "*",
+        "5,6"
+      ]
+    ],
+    "explanation": "5,6 selecciona viernes y sábado.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 2 minutos en las horas 7 a 9 y 16 a 18.",
+    "hint": "Combina dos rangos en una lista.",
+    "answers": [
+      [
+        "*/2",
+        "7-9,16-18",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "7-9,16-18 selecciona esas seis horas; */2 los minutos pares.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 9:00 el día 1 de cada mes.",
+    "hint": "El tercer campo representa el día del mes.",
+    "answers": [
+      [
+        "0",
+        "9",
+        "1",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "La expresión 0 9 1 * * ejecuta la tarea a las 9:00 el primer día de cada mes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 12:00 el día 1 de julio.",
+    "hint": "Julio es el mes 7.",
+    "answers": [
+      [
+        "0",
+        "12",
+        "1",
+        "7",
+        "*"
+      ]
+    ],
+    "explanation": "Los campos minuto 0, hora 12, día 1 y mes 7 representan el 1 de julio a mediodía.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 15 minutos excepto durante la hora 2.",
+    "hint": "Usa una lista explícita de rangos de horas.",
+    "answers": [
+      [
+        "*/15",
+        "0-1,3-23",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "0-1,3-23 incluye todas las horas excepto la 2.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 6:00 de lunes a viernes.",
+    "hint": "Los días laborables son 1-5.",
+    "answers": [
+      [
+        "0",
+        "6",
+        "*",
+        "*",
+        "1-5"
+      ]
+    ],
+    "explanation": "El último campo selecciona lunes a viernes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 9 minutos empezando en el minuto 4.",
+    "hint": "El paso empieza en 4.",
+    "answers": [
+      [
+        "4-59/9",
+        "*",
+        "*",
+        "*",
+        "*"
+      ]
+    ],
+    "explanation": "4-59/9 selecciona 4,13,22,31,40,49,58.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 11:00 los días 1-10 de junio y diciembre.",
+    "hint": "Rango de días y lista de meses.",
+    "answers": [
+      [
+        "0",
+        "11",
+        "1-10",
+        "6,12",
+        "*"
+      ]
+    ],
+    "explanation": "1-10 selecciona los primeros diez días; 6,12 son junio y diciembre.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 8:00 el día 1 de cada mes y también todos los domingos.",
+    "hint": "Ambos campos de día restringidos usan OR en cron tradicional.",
+    "answers": [
+      [
+        "0",
+        "8",
+        "1",
+        "*",
+        "0"
+      ],
+      [
+        "0",
+        "8",
+        "1",
+        "*",
+        "7"
+      ]
+    ],
+    "explanation": "La expresión representa la unión: día 1 o domingo.",
+    "difficulty": "dificil"
   }
 ]

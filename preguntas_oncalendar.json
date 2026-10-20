@@ -1,0 +1,475 @@
+[
+  {
+    "question": "Programa una tarea todos los días a medianoche.",
+    "hint": "systemd acepta alias de calendario para frecuencias habituales.",
+    "answers": [
+      [
+        "*-*-* 00:00:00"
+      ]
+    ],
+    "explanation": "daily equivale a una ejecución diaria a medianoche.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea cada hora, al comienzo de la hora.",
+    "hint": "Busca el alias de systemd para una ejecución cada hora.",
+    "answers": [
+      [
+        "*-*-* *:00:00"
+      ]
+    ],
+    "explanation": "hourly programa una ejecución al comienzo de cada hora.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea una vez por semana, el lunes a medianoche.",
+    "hint": "El alias semanal predeterminado usa el comienzo de la semana.",
+    "answers": [
+      [
+        "Mon *-*-* 00:00:00"
+      ]
+    ],
+    "explanation": "weekly equivale a una ejecución semanal, normalmente el lunes a medianoche.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea una vez al mes, el primer día a medianoche.",
+    "hint": "Hay un alias para el comienzo de cada mes.",
+    "answers": [
+      [
+        "*-*-01 00:00:00"
+      ]
+    ],
+    "explanation": "monthly equivale al primer día de cada mes a medianoche.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea una vez al año, el 1 de enero a medianoche.",
+    "hint": "Piensa en el alias anual de systemd.",
+    "answers": [
+      [
+        "*-01-01 00:00:00"
+      ]
+    ],
+    "explanation": "yearly y annually son alias para una ejecución anual el 1 de enero a medianoche.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea todos los días a las 08:00.",
+    "hint": "La fecha completa puede expresarse con asteriscos.",
+    "answers": [
+      [
+        "*-*-* 08:00:00"
+      ]
+    ],
+    "explanation": "*-*-* significa cualquier año, mes y día; 08:00:00 fija la hora.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea todos los días a las 18:30.",
+    "hint": "Usa formato HH:MM:SS.",
+    "answers": [
+      [
+        "*-*-* 18:30:00"
+      ]
+    ],
+    "explanation": "La hora 18:30 se expresa como 18:30:00.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea el día 1 de cada mes a las 06:00.",
+    "hint": "El día del mes va al final del bloque de fecha.",
+    "answers": [
+      [
+        "*-*-01 06:00:00"
+      ]
+    ],
+    "explanation": "*-*-01 selecciona el primer día de todos los meses.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea el 1 de enero a medianoche cada año.",
+    "hint": "El orden de fecha es año-mes-día.",
+    "answers": [
+      [
+        "*-01-01 00:00:00"
+      ]
+    ],
+    "explanation": "*-01-01 selecciona el 1 de enero de cualquier año.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea todos los lunes a las 09:00.",
+    "hint": "Puedes anteponer el día de la semana en inglés abreviado.",
+    "answers": [
+      [
+        "Mon *-*-* 09:00:00"
+      ]
+    ],
+    "explanation": "Mon selecciona los lunes y la hora es 09:00:00.",
+    "difficulty": "facil"
+  },
+  {
+    "question": "Programa una tarea de lunes a viernes a las 08:00.",
+    "hint": "OnCalendar permite rangos de días de la semana con dos puntos.",
+    "answers": [
+      [
+        "Mon..Fri *-*-* 08:00:00"
+      ]
+    ],
+    "explanation": "Mon..Fri representa de lunes a viernes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea todos los sábados a las 10:30.",
+    "hint": "Usa la abreviatura inglesa de sábado.",
+    "answers": [
+      [
+        "Sat *-*-* 10:30:00"
+      ]
+    ],
+    "explanation": "Sat selecciona los sábados.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea todos los domingos a las 20:00.",
+    "hint": "Usa la abreviatura inglesa de domingo.",
+    "answers": [
+      [
+        "Sun *-*-* 20:00:00"
+      ]
+    ],
+    "explanation": "Sun selecciona los domingos.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea el día 15 de cada mes a las 12:00.",
+    "hint": "El tercer componente de fecha es el día del mes.",
+    "answers": [
+      [
+        "*-*-15 12:00:00"
+      ]
+    ],
+    "explanation": "*-*-15 selecciona el día 15 de cada mes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea todos los días a las 23:00.",
+    "hint": "Usa comodines para indicar todos los años, meses y días.",
+    "answers": [
+      [
+        "*-*-* 23:00:00"
+      ]
+    ],
+    "explanation": "Los tres comodines indican todos los años, meses y días; la hora se fija a las 23:00:00.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea el 1 de junio de cada año a las 07:15.",
+    "hint": "El mes 06 es junio.",
+    "answers": [
+      [
+        "*-06-01 07:15:00"
+      ]
+    ],
+    "explanation": "*-06-01 selecciona el 1 de junio de cada año.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea los lunes y miércoles a las 14:00.",
+    "hint": "Puedes separar días concretos con una coma.",
+    "answers": [
+      [
+        "Mon,Wed *-*-* 14:00:00"
+      ]
+    ],
+    "explanation": "Mon,Wed selecciona lunes y miércoles.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea los días 1 y 15 de cada mes a las 06:00.",
+    "hint": "El día admite una lista separada por comas.",
+    "answers": [
+      [
+        "*-*-01,15 06:00:00"
+      ]
+    ],
+    "explanation": "01,15 selecciona los días 1 y 15.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada marzo y septiembre a las 09:30, el día 1.",
+    "hint": "Usa una lista de meses en el campo de fecha.",
+    "answers": [
+      [
+        "*-03,09-01 09:30:00"
+      ]
+    ],
+    "explanation": "03,09 representa marzo y septiembre; el día 01 selecciona el primer día de cada mes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea todos los días a las 06:00 y a las 18:00.",
+    "hint": "La hora puede contener una lista.",
+    "answers": [
+      [
+        "*-*-* 06,18:00:00"
+      ]
+    ],
+    "explanation": "06,18 indica ambas horas.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada dos horas, empezando a medianoche.",
+    "hint": "Los pasos pueden escribirse con una barra en el campo de horas.",
+    "answers": [
+      [
+        "*-*-* 0/2:00:00"
+      ]
+    ],
+    "explanation": "0/2 selecciona las horas 00, 02, 04 y así sucesivamente.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 15 minutos.",
+    "hint": "Prueba un paso de 15 en el campo de minutos.",
+    "answers": [
+      [
+        "*-*-* *:0/15:00"
+      ]
+    ],
+    "explanation": "*:0/15 selecciona el minuto 0, 15, 30 y 45 de cada hora.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 30 minutos.",
+    "hint": "El campo de minutos admite intervalos.",
+    "answers": [
+      [
+        "*-*-* *:0/30:00"
+      ]
+    ],
+    "explanation": "*:0/30 selecciona los minutos 0 y 30 de cada hora.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea a las 08:00 el primer lunes de cada mes.",
+    "hint": "Combina el día de la semana con el rango de días 1 a 7.",
+    "answers": [
+      [
+        "Mon *-*-1..7 08:00:00"
+      ]
+    ],
+    "explanation": "Mon y 1..7 seleccionan los lunes que caen entre el día 1 y el 7: el primer lunes.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea el 29 de febrero a las 12:00.",
+    "hint": "La fecha puede especificarse aunque no exista todos los años.",
+    "answers": [
+      [
+        "*-02-29 12:00:00"
+      ]
+    ],
+    "explanation": "La tarea solo puede ejecutarse cuando el año tenga 29 de febrero.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada día a las 07:00, excepto los domingos.",
+    "hint": "Selecciona explícitamente los seis primeros días de la semana laboral ampliada.",
+    "answers": [
+      [
+        "Mon..Sat *-*-* 07:00:00"
+      ]
+    ],
+    "explanation": "Mon..Sat selecciona de lunes a sábado y excluye domingo.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea el 1 de enero y el 1 de julio a medianoche.",
+    "hint": "Usa una lista de meses y fija el día 1.",
+    "answers": [
+      [
+        "*-01,07-01 00:00:00"
+      ]
+    ],
+    "explanation": "01,07 selecciona enero y julio; el día 01 selecciona el primer día.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada diciembre a las 23:45, el día 31.",
+    "hint": "Fecha año-mes-día.",
+    "answers": [
+      [
+        "*-12-31 23:45:00"
+      ]
+    ],
+    "explanation": "*-12-31 selecciona el 31 de diciembre de cada año.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea los días laborables a las 09:00 y 17:00.",
+    "hint": "Combina el rango de días de la semana y la lista de horas.",
+    "answers": [
+      [
+        "Mon..Fri *-*-* 09,17:00:00"
+      ]
+    ],
+    "explanation": "Mon..Fri selecciona días laborables y 09,17 indica dos horas.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea el día 10 de cada mes a las 02:05.",
+    "hint": "Fija día del mes y hora.",
+    "answers": [
+      [
+        "*-*-10 02:05:00"
+      ]
+    ],
+    "explanation": "El día 10 se escribe como el tercer componente de fecha.",
+    "difficulty": "media"
+  },
+  {
+    "question": "Programa una tarea cada 5 minutos.",
+    "hint": "Usa un paso de cinco en el campo de minutos.",
+    "answers": [
+      [
+        "*-*-* *:0/5:00"
+      ]
+    ],
+    "explanation": "*:0/5 selecciona 0, 5, 10, 15 y así sucesivamente dentro de cada hora.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 7 minutos.",
+    "hint": "El paso se reinicia dentro del campo de minutos, no es un temporizador continuo.",
+    "answers": [
+      [
+        "*-*-* *:0/7:00"
+      ]
+    ],
+    "explanation": "*:0/7 selecciona minutos 0, 7, 14, 21, 28, 35, 42, 49 y 56 de cada hora.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea el segundo domingo de cada mes a las 08:00.",
+    "hint": "El segundo domingo siempre cae entre los días 8 y 14.",
+    "answers": [
+      [
+        "Sun *-*-8..14 08:00:00"
+      ]
+    ],
+    "explanation": "Sun con el rango 8..14 selecciona el segundo domingo del mes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea el último viernes de cada mes a las 18:00.",
+    "hint": "El último viernes cae entre los días 25 y 31.",
+    "answers": [
+      [
+        "Fri *-*-25..31 18:00:00"
+      ]
+    ],
+    "explanation": "Fri con 25..31 selecciona el viernes final del mes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea el primer día de cada trimestre a las 00:30.",
+    "hint": "Los trimestres comienzan en enero, abril, julio y octubre.",
+    "answers": [
+      [
+        "*-01,04,07,10-01 00:30:00"
+      ]
+    ],
+    "explanation": "La lista de meses 01,04,07,10 con día 01 selecciona el inicio de cada trimestre.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 08:00 los lunes de enero.",
+    "hint": "Combina día de la semana y mes en una expresión de calendario.",
+    "answers": [
+      [
+        "Mon *-01-* 08:00:00"
+      ]
+    ],
+    "explanation": "Mon limita a lunes y *-01-* a enero.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea de lunes a viernes durante los siete primeros días de cada mes, a las 07:00.",
+    "hint": "Combina el rango de días de la semana con el rango de días del mes.",
+    "answers": [
+      [
+        "Mon..Fri *-*-01..07 07:00:00"
+      ]
+    ],
+    "explanation": "La expresión limita la ejecución a lunes-viernes y a los días 1 a 7 del mes. No garantiza que se ejecute solo el primer día laborable; para eso haría falta lógica adicional.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea a las 00:00 cada 3 días, empezando el día 1 de cada mes.",
+    "hint": "Un paso en el campo de día puede contar desde el inicio del rango dentro del mes.",
+    "answers": [
+      [
+        "*-*-1/3 00:00:00"
+      ]
+    ],
+    "explanation": "1/3 selecciona los días 1, 4, 7, 10 y sucesivos dentro de cada mes.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada día a las 06:00, 12:00 y 18:00.",
+    "hint": "La lista de horas permite varias ejecuciones al día.",
+    "answers": [
+      [
+        "*-*-* 06,12,18:00:00"
+      ]
+    ],
+    "explanation": "06,12,18 representa las tres horas.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea el primer y último día de cada mes a las 23:00.",
+    "hint": "El día 31 no existe en todos los meses; no representa automáticamente el último día.",
+    "answers": [
+      [
+        "*-*-01,31 23:00:00"
+      ]
+    ],
+    "explanation": "01,31 selecciona el día 1 y el 31 cuando existe; no equivale al último día de todos los meses.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada 10 minutos entre las 08:00 y las 17:50.",
+    "hint": "Combina un rango de horas con un paso de minutos.",
+    "answers": [
+      [
+        "*-*-* 8-17:0/10:00"
+      ]
+    ],
+    "explanation": "8-17 selecciona las horas 8 a 17 y 0/10 selecciona cada diez minutos dentro de ellas.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea cada domingo a las 23:55.",
+    "hint": "Día de la semana antes de la fecha.",
+    "answers": [
+      [
+        "Sun *-*-* 23:55:00"
+      ]
+    ],
+    "explanation": "Sun selecciona domingos.",
+    "difficulty": "dificil"
+  },
+  {
+    "question": "Programa una tarea el día 1 de cada mes a medianoche, pero solo en años pares.",
+    "hint": "OnCalendar no tiene un operador general de paridad del año; la expresión de fecha no puede expresar esa restricción sola.",
+    "answers": [
+      [
+        "*-*-01 00:00:00"
+      ]
+    ],
+    "explanation": "La expresión base selecciona el día 1 de cada mes; la condición de año par necesita lógica adicional o una planificación por años concretos.",
+    "difficulty": "dificil"
+  }
+]

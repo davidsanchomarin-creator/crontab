@@ -259,3 +259,213 @@ footer {
     flex: 1;
   }
 }
+
+
+/* Respeta los saltos de línea de las explicaciones y pistas. */
+#feedback {
+  white-space: pre-line;
+}
+
+
+#retry-wrong[hidden] { display: none; }
+
+.topic-card select {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #b9cce0;
+  border-radius: 8px;
+  background: white;
+  color: var(--navy);
+  font: inherit;
+}
+#oncalendar-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+  margin: 24px 0;
+}
+#oncalendar-answer {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #b9cce0;
+  border-radius: 8px;
+  font: 600 1rem monospace;
+}
+
+/* Campo de respuesta de OnCalendar: una única expresión en una sola línea */
+#oncalendar-answer {
+  width: 100%;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.01em;
+}
+
+#oncalendar-fields .oncalendar-preview {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-weight: 600;
+}
+#oncalendar-fields input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 8px;
+  border: 1px solid #b9cce0;
+  border-radius: 8px;
+  font: 600 1rem monospace;
+}
+
+/* Formularios separados por tema */
+#cron-fields[hidden],
+#oncalendar-fields[hidden] {
+  display: none !important;
+}
+
+.oncalendar-fields {
+  display: block;
+  margin: 28px 0;
+}
+
+.oncalendar-date-time {
+  display: grid;
+  grid-template-columns: minmax(70px, 1fr) 12px minmax(70px, 1fr) 12px minmax(70px, 1fr) 12px minmax(70px, 1fr) 26px;
+  align-items: start;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.oncalendar-date-time label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+  min-width: 0;
+}
+
+.oncalendar-date-time input,
+#oncalendar-fields > label input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 6px;
+  border: 1px solid #b9cce0;
+  border-radius: 8px;
+  font: 600 1rem monospace;
+}
+
+.fixed-symbol {
+  align-self: start;
+  padding-top: 12px;
+  text-align: center;
+  font: 700 1.1rem monospace;
+  color: var(--navy);
+}
+
+.oncalendar-preview {
+  grid-column: 1 / -1;
+  margin: 16px 0 0;
+  font-weight: 600;
+}
+
+@media (max-width: 650px) {
+  .oncalendar-date-time {
+    grid-template-columns: minmax(55px, 1fr) 10px minmax(55px, 1fr);
+    row-gap: 12px;
+  }
+  .oncalendar-date-time label:nth-of-type(3) {
+    grid-column: 1;
+  }
+  .oncalendar-date-time .fixed-symbol:nth-of-type(4) {
+    grid-column: 2;
+  }
+}
+
+/* OnCalendar: todos los componentes de la expresión en una sola línea */
+.oncalendar-fields {
+  margin: 28px 0;
+  min-width: 0;
+}
+
+.oncalendar-expression-row {
+  display: grid;
+  grid-template-columns: minmax(100px, 1.35fr) minmax(48px, .55fr) 10px
+    minmax(48px, .55fr) 8px minmax(48px, .55fr) 8px
+    minmax(48px, .55fr) 25px;
+  align-items: start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.oncalendar-expression-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+.oncalendar-expression-row input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 4px;
+  border: 1px solid #b9cce0;
+  border-radius: 7px;
+  font: 600 .9rem monospace;
+}
+
+.oncalendar-expression-row label small {
+  font-size: .7rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.oncalendar-expression-row .fixed-symbol {
+  align-self: center;
+  padding-top: 0;
+  text-align: center;
+  font: 700 1rem monospace;
+  color: var(--navy);
+}
+
+.oncalendar-expression-row .space-symbol {
+  width: 8px;
+}
+
+.oncalendar-expression-row .seconds-symbol {
+  white-space: nowrap;
+  padding-top: 10px;
+}
+
+.oncalendar-preview {
+  margin: 18px 0 0;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .oncalendar-expression-row {
+    grid-template-columns: minmax(85px, 1.2fr) minmax(40px, .55fr) 8px
+      minmax(40px, .55fr) 6px minmax(40px, .55fr) 6px
+      minmax(40px, .55fr) 22px;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 520px) {
+  .oncalendar-expression-row {
+    grid-template-columns: minmax(75px, 1.2fr) minmax(38px, .55fr) 7px
+      minmax(38px, .55fr) 4px minmax(38px, .55fr) 4px
+      minmax(38px, .55fr) 20px;
+    gap: 3px;
+  }
+  .oncalendar-expression-row label {
+    font-size: .78rem;
+  }
+  .oncalendar-expression-row input {
+    padding: 9px 2px;
+    font-size: .8rem;
+  }
+  .oncalendar-expression-row label small {
+    font-size: .62rem;
+  }
+}

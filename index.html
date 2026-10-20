@@ -1,85 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Práctica de crontab</title>
+  <title>Práctica de planificación de tareas en Linux</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Práctica de crontab</h1>
-      <p>Aprende a programar tareas en Ubuntu Server</p>
-      
+      <h1>Práctica de planificación de tareas en Linux</h1>
+      <p>Practica expresiones de crontab y temporizadores systemd</p>
     </div>
   </header>
 
   <main class="container layout">
     <section class="main">
+      <section class="card topic-card">
+        <label for="topic-select"><strong>¿Qué quieres practicar?</strong></label>
+        <select id="topic-select">
+          <option value="cron">Cron / crontab (100 preguntas)</option>
+          <option value="oncalendar">systemd timers / OnCalendar (46 preguntas)</option>
+        </select>
+        <p class="muted">Cada bloque tiene su propio banco de preguntas y sus propias respuestas.</p>
+      </section>
+
       <div class="progress-card">
         <div class="progress-info">
           <strong id="counter">Cargando preguntas...</strong>
           <span id="mode-label">Modo fácil</span>
         </div>
-        <div class="progress-track">
-          <div id="progress"></div>
-        </div>
+        <div class="progress-track"><div id="progress"></div></div>
       </div>
 
       <section class="card">
-        <p class="eyebrow">EXPRESIÓN CRON</p>
+        <p class="eyebrow" id="exercise-label">EXPRESIÓN CRON</p>
         <h2 id="question">Cargando pregunta...</h2>
-        <p class="muted">
-          Completa los cinco campos de la expresión.
-        </p>
+        <p class="muted" id="instructions">Completa los campos de la expresión.</p>
 
         <form id="answer-form">
-          <div class="fields">
-            <label>Minuto
-              <input id="minute" autocomplete="off" required>
-              <small>0-59</small>
-            </label>
-            <label>Hora
-              <input id="hour" autocomplete="off" required>
-              <small>0-23</small>
-            </label>
-            <label>Día del mes
-              <input id="day" autocomplete="off" required>
-              <small>1-31</small>
-            </label>
-            <label>Mes
-              <input id="month" autocomplete="off" required>
-              <small>1-12</small>
-            </label>
-            <label>Día de la semana
-              <input id="weekday" autocomplete="off" required>
-              <small>0-7</small>
-            </label>
+          <div class="fields" id="cron-fields">
+            <label>Minuto<input id="minute" autocomplete="off" required><small>0-59</small></label>
+            <label>Hora<input id="hour" autocomplete="off" required><small>0-23</small></label>
+            <label>Día del mes<input id="day" autocomplete="off" required><small>1-31</small></label>
+            <label>Mes<input id="month" autocomplete="off" required><small>1-12</small></label>
+            <label>Día de la semana<input id="weekday" autocomplete="off" required><small>0-7</small></label>
+          </div>
+          <div class="oncalendar-fields" id="oncalendar-fields" hidden>
+            <div class="oncalendar-expression-row">
+              <label>Día semana
+                <input id="oc-weekday" autocomplete="off" placeholder="Mon..Fri" required>
+                <small>*, Mon, Mon..Fri</small>
+              </label>
+              <label>Mes
+                <input id="oc-month" autocomplete="off" placeholder="*" required>
+                <small>1-12</small>
+              </label>
+              <span class="fixed-symbol" aria-hidden="true">-</span>
+              <label>Día mes
+                <input id="oc-day" autocomplete="off" placeholder="*" required>
+                <small>1-31</small>
+              </label>
+              <span class="fixed-symbol space-symbol" aria-hidden="true"> </span>
+              <label>Hora
+                <input id="oc-hour" autocomplete="off" placeholder="08" required>
+                <small>0-23</small>
+              </label>
+              <span class="fixed-symbol" aria-hidden="true">:</span>
+              <label>Minuto
+                <input id="oc-minute" autocomplete="off" placeholder="00" required>
+                <small>0-59</small>
+              </label>
+              <span class="fixed-symbol seconds-symbol" aria-hidden="true">:00</span>
+            </div>
+            <p class="muted oncalendar-preview">Expresión resultante: <code id="oncalendar-preview">*-*-* 08:00:00</code></p>
+          </div>
+          <div class="tip" id="tip-cron">
+            <strong>Recuerda:</strong> <code>minuto hora día mes día_semana</code>. El asterisco significa todos los valores.
+          </div>
+          <div class="tip" id="tip-oncalendar" hidden>
+            <strong>Recuerda:</strong> <code>OnCalendar=</code> admite expresiones de calendario y alias como <code>daily</code>, <code>weekly</code> y <code>hourly</code>.
           </div>
 
-          <div class="tip">
-            <strong>Recuerda:</strong>
-            <code>minuto hora día mes día_semana</code>.
-            El asterisco significa todos los valores.
-          </div>
-
-          <div id="feedback" role="status" aria-live="polite"
-               class="feedback" hidden></div>
-
+          <div id="feedback" role="status" aria-live="polite" class="feedback" hidden></div>
           <div class="actions">
-            <button type="button" id="skip" class="secondary">
-              Saltar pregunta
-            </button>
+            <button type="button" id="retry-wrong" class="secondary" hidden>Repetir preguntas falladas (<span id="wrong-count">0</span>)</button>
+            <button type="button" id="skip" class="secondary">Saltar pregunta</button>
             <div>
-              <button type="button" id="check" class="primary">
-                Comprobar
-              </button>
-              <button type="button" id="next" class="primary" hidden>
-                Siguiente →
-              </button>
+              <button type="button" id="check" class="primary">Comprobar</button>
+              <button type="button" id="next" class="primary" hidden>Siguiente →</button>
             </div>
           </div>
         </form>
@@ -89,36 +99,24 @@
     <aside>
       <section class="card">
         <h3>Modo de práctica</h3>
-
         <label class="mode-option">
           <input type="radio" name="mode" value="easy" checked>
-          <span>
-            <strong>Fácil</strong>
-            <small>Valida el formato y el rango de cada campo.</small>
-          </span>
+          <span><strong>Fácil</strong><small>Valida el formato de los campos. En OnCalendar, los guiones y dos puntos forman parte de la expresión.</small></span>
         </label>
-
         <label class="mode-option">
-          <input type="radio" name="mode" value="hard" disabled>
-          <span>
-            <strong>Difícil</strong>
-            <small>Puedes escribir cualquier texto.</small>
-          </span>
+          <input type="radio" name="mode" value="hard">
+          <span><strong>Difícil</strong><small>Permite escribir libremente sin validación previa.</small></span>
         </label>
       </section>
-
       <section class="card stats">
         <h3>Tu progreso</h3>
         <p>Respondidas <strong id="answered">0</strong></p>
         <p>Aciertos <strong id="correct">0</strong></p>
         <p>Puntuación <strong id="score">0%</strong></p>
-        <button id="reset" class="secondary full">
-          Reiniciar práctica
-        </button>
+        <button id="reset" class="secondary full">Reiniciar práctica</button>
       </section>
     </aside>
   </main>
-
-  <footer>Práctica de crontab · Formación ASIR</footer>
+  <footer>Práctica de Cron y systemd timers · Formación ASIR</footer>
 </body>
 </html>
